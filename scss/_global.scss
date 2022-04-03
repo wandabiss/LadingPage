@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+// Globales
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin:0;
+    padding:0;
+    line-height: 1.6;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+}
+
+img{
+    width:100%;
+    height: auto;
+}
+
+nav, .servicios, .presentacion, .footer-content{
+    width: 80%;
+    margin:auto;
+}
+
+.titulo-servicios, .presentacion{
+    margin-bottom: 10%;
+}
+
+// Variables para las fonts
+
+$font-p: 1.8rem;
+$font-h1: 3.0rem;
+$font-h2: 2.4rem;
+$font-h3: 2.0rem;
+$font-h4: 1.4rem;
+
+p{
+    font-size:$font-p;
+    color: black;
+}
+
+h2{
+    font-size: $font-h2;
+}
+
+h3{
+    font-size: $font-h3;
+    font-weight:bold;
+}
+
+h4{
+    font-size: $font-h4;
+}
+
+// Botones
+
+.btn{
+    border: none;
+    border-radius:2px;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size:1.5rem;
+    font-weight: 500;
+    transition: transform 100ms;
+    &:hover{
+        transform: scale(1.1);
+    }
+    
+}
+
+// Botones - Uso de Extend para las propiedades distintas
+
+.btn-principal{
+    @extend .btn;
+    color: #fff;
+    background-color: #ed6484;
+}
+
+.btn-secundario{
+    @extend .btn;
+    background-color:rgb(134, 132, 132);
+}
+
+
+// Responsive con Mixin ($parametro en eje principal Y, $parámetro en el eje Z, $parametro para el wrap)
+
+@mixin caja-flex($principal, $cruzado, $wrap){
+    display: flex;
+    justify-content: $principal;
+    align-items: $cruzado;
+    flex-wrap: $wrap;
+}
+

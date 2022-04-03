@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page con SASS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/8a815a169a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <!--  INICIO DE NAV -->
+    <header id="menu"> 
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="#work">WORK</a></li>
+                <li><a href="#sobremi">SOBRE MI</a></li>
+                <li><a href="#">BLOG</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <!--  FIN DE NAV -->
+
+
+    <!--  INICIO DE HOME-->
+    <section class="presentacion">  
+        <div class="flex-item1">
+        <h1>HELLO WANDI</h1>     
+    </div>
+    </section>
+    <!--  FIN DE HOME-->
+
+
+
+    <!--  INICIO DE WORK-->
+    <section id="work" class="presentacion">
+        <div class="flex-item1">
+            <h1>Diseño y desarrollo de tu identidad en internet</h1>
+            <p>Conociendome, mi vida halló una razón</p>
+            <div>
+                <button class="btn-principal" type ="submit"><a href="#work2">WORK</a></button>
+                <button class="btn-secundario" type ="submit"><a href="#sobremi"> ABOUT</a></button>
+            </div>
+        </div>
+        <div class="flex-item2">
+            <img src="img/caratula2.png" alt="HelloWandi">
+        </div>
+    </section>
+
+
+    <div id="work2" class="wrapper">
+        <section  class="servicios" >
+            <div class="titulo-servicios">
+                <h2> Hacelo simple</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci laudantium delectus nobis a molestiae amet eaque consequatur veritatis excepturi at.
+                </p>
+            </div>
+            <div class="tipo-servicios">
+                <div >
+                    <i class="fas fa-drafting-compass"></i>
+                    <h3>Branding e identidad de marca</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, est.
+                    </p>
+                </div>
+                <div>
+                    <i class="fas fa-laptop"></i>
+                    <h3>Web Design & UX/UI</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, est.
+                    </p>
+                </div>
+                <div>
+                    <i class="fas fa-cart-arrow-down"></i>
+                    <h3>Publicidad</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, est.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--  FIN DE WORK-->
+
+
+
+    <!--  INICIO DE SOBRE MI-->
+    <section id="sobremi" class="presentacion">
+        <div class="flex-item1">
+            <h1 >Hola! Soy Wanda</h1>
+            <p>
+                Soy una apasionada de la tecnología y la psicología.<br>En mis tiempos libres pienso en una idea millonaria.<br>En el trabajo soy una multitask ultra metódica.<br>
+                En casa soy cantante de ducha. <br>Mi hobby es viajar y descubrir como funcionan las cosas. 
+            </p>
+        </div>
+        <div class="flex-item2">
+            <img src="img/fotomia.png" alt="wanda" height="100%" >
+        </div>
+    </section>
+    <!--  FIN DE SOBRE MI-->
+
+
+    <!--  INICIO DE FOTER -->
+
+    <footer>
+        <div class="footer-content">
+        <a href="mailto:web.design.wanda@gmail.com"> 
+            <h3> web.design.wanda@gmail.com </h3> </a><br>
+            <a href="https://hellowandi.com/" target="_blank"><h4>www.hellowandi.com</h4></a>
+        </div>
+    </footer>
+    <!--  FIN DE FOOTER -->
+    	
+
+     <!--  Usé un script para cuando se haga scroll cambie el color de la nav a un fondo solido blanco -->
+
+    <script>
+       const menu = document.getElementById('menu');
+       window.onscroll = function(){
+           if(window.pageYOffset>10){
+               menu.style.backgroundColor='#fff';
+           }
+           else{
+               menu.style.backgroundColor='initial';
+           }
+       }
+    </script>
+
+</body>
+</html>
